@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Language Books</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Programming Language Books</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <input type="text" id="search" placeholder="Search for books..." oninput="filterBooks()">
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Our Bookstore</h2>
+            <p>Your go-to place for learning programming languages. Enjoy a vast collection of books in a comfortable reading environment.</p>
+        </section>
+
+        <section id="books">
+            <h2>Our Books</h2>
+            <div class="book-list" id="book-list">
+                <!-- Book Entries -->
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51Tj9mXEK0L._SX379_BO1,204,203,200_.jpg" alt="Learn Python the Hard Way">
+                    <h3>Learn Python the Hard Way</h3>
+                    <p>Author: Zed A. Shaw</p>
+                    <p>Price: $29.99</p>
+                    <button onclick="buyBook('Learn Python the Hard Way')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51uMgM6EbmL._SX379_BO1,204,203,200_.jpg" alt="JavaScript: The Good Parts">
+                    <h3>JavaScript: The Good Parts</h3>
+                    <p>Author: Douglas Crockford</p>
+                    <p>Price: $24.99</p>
+                    <button onclick="buyBook('JavaScript: The Good Parts')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41B9YDe+dFL._SX376_BO1,204,203,200_.jpg" alt="Clean Code">
+                    <h3>Clean Code</h3>
+                    <p>Author: Robert C. Martin</p>
+                    <p>Price: $34.99</p>
+                    <button onclick="buyBook('Clean Code')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41fNcEZ2nGL._SX379_BO1,204,203,200_.jpg" alt="Effective Java">
+                    <h3>Effective Java</h3>
+                    <p>Author: Joshua Bloch</p>
+                    <p>Price: $39.99</p>
+                    <button onclick="buyBook('Effective Java')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41rf5IS-VIL._SX396_BO1,204,203,200_.jpg" alt="Introduction to the Theory of Computation">
+                    <h3>Introduction to the Theory of Computation</h3>
+                    <p>Author: Michael Sipser</p>
+                    <p>Price: $44.99</p>
+                    <button onclick="buyBook('Introduction to the Theory of Computation')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51q4l5hrnPL._SX398_BO1,204,203,200_.jpg" alt="The Pragmatic Programmer">
+                    <h3>The Pragmatic Programmer</h3>
+                    <p>Author: Andrew Hunt</p>
+                    <p>Price: $42.99</p>
+                    <button onclick="buyBook('The Pragmatic Programmer')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41IhPVIMQGL._SX376_BO1,204,203,200_.jpg" alt="You Don’t Know JS">
+                    <h3>You Don’t Know JS</h3>
+                    <p>Author: Kyle Simpson</p>
+                    <p>Price: $27.99</p>
+                    <button onclick="buyBook('You Don’t Know JS')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41Od7AMoLsL._SX379_BO1,204,203,200_.jpg" alt="Design Patterns">
+                    <h3>Design Patterns</h3>
+                    <p>Author: Erich Gamma</p>
+                    <p>Price: $49.99</p>
+                    <button onclick="buyBook('Design Patterns')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51zjCObbtFL._SX376_BO1,204,203,200_.jpg" alt="Refactoring">
+                    <h3>Refactoring</h3>
+                    <p>Author: Martin Fowler</p>
+                    <p>Price: $39.99</p>
+                    <button onclick="buyBook('Refactoring')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51zqXvdOQAL._SX379_BO1,204,203,200_.jpg" alt="Code Complete">
+                    <h3>Code Complete</h3>
+                    <p>Author: Steve McConnell</p>
+                    <p>Price: $44.99</p>
+                    <button onclick="buyBook('Code Complete')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41CPR4sZ6DL._SX379_BO1,204,203,200_.jpg" alt="The Art of Computer Programming">
+                    <h3>The Art of Computer Programming</h3>
+                    <p>Author: Donald Knuth</p>
+                    <p>Price: $150.00</p>
+                    <button onclick="buyBook('The Art of Computer Programming')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51NX4fIAnNL._SX379_BO1,204,203,200_.jpg" alt="Java: The Complete Reference">
+                    <h3>Java: The Complete Reference</h3>
+                    <p>Author: Herbert Schildt</p>
+                    <p>Price: $39.99</p>
+                    <button onclick="buyBook('Java: The Complete Reference')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51LUjz2iZwL._SX379_BO1,204,203,200_.jpg" alt="Head First Java">
+                    <h3>Head First Java</h3>
+                    <p>Author: Kathy Sierra</p>
+                    <p>Price: $37.99</p>
+                    <button onclick="buyBook('Head First Java')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41tK+VDDzEL._SX379_BO1,204,203,200_.jpg" alt="Python Crash Course">
+                    <h3>Python Crash Course</h3>
+                    <p>Author: Eric Matthes</p>
+                    <p>Price: $29.99</p>
+                    <button onclick="buyBook('Python Crash Course')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41P6s5qkH4L._SX379_BO1,204,203,200_.jpg" alt="Learning JavaScript Data Structures and Algorithms">
+                    <h3>Learning JavaScript Data Structures and Algorithms</h3>
+                    <p>Author: Sammie Bae</p>
+                    <p>Price: $34.99</p>
+                    <button onclick="buyBook('Learning JavaScript Data Structures and Algorithms')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51Z4Nzf2KiL._SX379_BO1,204,203,200_.jpg" alt="Eloquent JavaScript">
+                    <h3>Eloquent JavaScript</h3>
+                    <p>Author: Marijn Haverbeke</p>
+                    <p>Price: $29.99</p>
+                    <button onclick="buyBook('Eloquent JavaScript')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41QQvlYwsTL._SX379_BO1,204,203,200_.jpg" alt="The Rust Programming Language">
+                    <h3>The Rust Programming Language</h3>
+                    <p>Author: Steve Klabnik</p>
+                    <p>Price: $39.99</p>
+                    <button onclick="buyBook('The Rust Programming Language')">Read Online</button>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41lAdS2eRDL._SX379_BO1,204,203,200_.jpg" alt="C Programming Language">
+                    <h3>C Programming Language</h3>
+                    <p>Author: Brian W. Kernighan</p>
+                    <p>Price: $45.99</p>
+                    <button onclick="buyBook('C Programming Language')">Read Online</button>
+                </div>
+                <!-- Continue adding books until reaching 100 -->
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing the best learning materials for aspiring programmers. Our platform offers a unique reading experience, where users can immerse themselves in their favorite programming books.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@programmingbooks.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Programming Language Books. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function buyBook(bookName) {
+            alert(`You can now read "${bookName}" online!`);
+        }
+
+        function filterBooks() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const books = document.querySelectorAll('.book');
+            books.forEach(book => {
+                const title = book.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(searchInput)) {
+                    book.style.display = 'block';
+                } else {
+                    book.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
